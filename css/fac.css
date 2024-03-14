@@ -1,0 +1,280 @@
+
+.bulk-upload{
+    position: relative;
+    height: 140px;
+    width: 300px;
+    margin-top: 40px;
+    margin-left:150px;
+    border-radius: 20px;
+    border-top: 3px solid rgb(23, 216, 200);
+    border-left: 3px solid rgb(33, 112, 185);
+    border-right: 3px solid rgb(127, 5, 175);
+    border-bottom: 2px solid rgba(216, 104, 210, 0.479);
+    
+}
+
+.choose{
+     height: 22px;
+     width: 210px;
+     margin-top: 10px;
+     margin-left: 30px;
+
+
+}
+#paragraph{
+    height: 25px;
+    width: 300px;
+    margin-top: 0px;
+    background-color: white;
+    border-radius: 25px ;
+
+}
+
+.individual{
+    height: 100px;
+    width: 300px;
+    margin-top: 5px;
+    margin-left: 150px;
+    border-radius: 20px;
+    border-top: 2px solid rgba(216, 104, 210, 0.479);
+    border-left: 3px solid rgb(33, 112, 185);
+    border-right: 3px solid  rgb(127, 5, 175);
+    border-bottom: 3px solid rgb(23, 216, 200);
+    
+}
+
+.Result{
+    position: absolute;
+    height: 250px;
+    width: 300px;
+    margin-top: -255px;
+    margin-left: 500px;
+    border-radius: 20px;
+    border-top: 3px solid black;
+    border-left: 3px solid rgb(56, 170, 21);
+    border-right: 3px solid rgb(209, 61, 177);
+    border-bottom: 3px solid rgb(52, 9, 151);
+}        
+
+.year{
+    position: absolute;
+    height: 25PX;
+    width: 100PX;
+    margin-top:-40px ;
+    margin-left: 150px;
+    border-radius: 20px;
+
+}
+
+.opt{
+position: absolute;
+height: 25px;
+width: 100px;
+margin-top: -40px;
+margin-left: 150px;
+border-radius: 20px;
+}
+
+#para1{
+    font-size: 20px;
+    margin-left: -140px;
+    margin-top: 25px;
+}
+#para2{
+    font-size: 19px;
+    margin-left: -140px;
+    margin-top: 30px;
+}
+
+#sec{
+font-size: 20px;
+}
+
+#view{
+    position: relative;
+    top: 20px;
+    height: 30px;
+    width: 80px;
+    margin-top: 1px;
+    margin-left: 110px;  
+    background-color: green;
+
+}
+#file,#Add{
+    position: relative;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    display: block;
+    margin-top:20px;
+    margin-left: 100px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    }
+    
+    /* individual result*/
+    .single-result{
+        height: 250px;
+        width: 300px;
+        border: 1px solid #4CAF50;
+        margin-top:-255px ;
+        margin-left: 900px;
+        border-bottom: 2px solid black;
+        border-left: 2px solid rgb(15, 110, 165);
+        border-top: 2px solid rgb(197, 11, 11);
+        border-right: 2px solid rgb(180, 190, 36);
+        border-radius: 25px;
+    }
+
+
+    #regno{
+        position: absolute;
+        top: 140px;
+        height: 25px;
+        width: 200px;
+    }
+
+
+    #name{
+        position: relative;
+        height: 25px;
+        width: 200px;
+        top: 80px;
+    }
+
+   #toview{ 
+
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 100px;
+    height: 30px;
+    margin-top:100px;
+    background-color: rgb(17, 111, 165);
+    color: white;
+    }
+
+
+       /* individual result*/
+
+#updateBloomWord{
+
+        margin-top: 100px;
+        margin-left: 150px; 
+        background-image: url(flower.png);
+        background-repeat: no-repeat;
+        background-position: 85px 20px;
+
+
+    }
+
+ #createQuestionPaper{
+    position:relative ;
+        margin-top: 100px;
+        margin-left: 530px;
+        background-image: url(que.png);
+        background-repeat: no-repeat;
+        background-position: 85px 20px;
+       
+    }
+
+
+ #viewQuestionPaper{
+      margin-top: 100px;
+      margin-left: 900px;
+      background-image: url(view.png);
+      background-repeat: no-repeat;
+      background-position: 85px 20px;
+     
+    }
+
+ #viewQuestionPaper,#createQuestionPaper,#updateBloomWord{
+    position: absolute;
+    height: 370px;
+    width: 300px;
+    background-color: #50d0da;
+    border: hidden;
+    border-radius: 25px;
+    border-bottom: 3px white solid;
+    border-left: 3px white solid ;
+    border-right: 3px white solid;
+    border-top: 3px white solid;
+    box-shadow: 0px 0px 0px 5px rgba(0,0,0,3);
+    transition: transform 0.7s;
+    }
+
+ #updateBloomWord:hover,#createQuestionPaper:hover,#viewQuestionPaper:hover {
+    opacity: 0.8; /* Show the text on hover */
+    transition: transform 0.7s ease-in-out; 
+    transform: scale(1.2)
+    }
+        
+ h2 {
+        margin-top: 190px;
+        text-align: center;
+        color: black
+        
+    }
+
+ p {
+       text-align: center;
+       color: #161111;
+       font-size :20px;
+       font-weight: bold;
+    }
+
+    button {
+        position:relative;
+        height: 330px;
+        width: 300px;
+        margin-top: -280px;
+        background-color:transparent;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;   
+         
+    }
+  
+/*  button  effects  */
+
+#bac{
+        position: absolute;
+        border: 1px solid black;
+        border-radius: 3px;
+        width: 100px;
+        height: 30px;
+        display: block;
+        margin-top:530px;
+        margin-left: 600px;
+        background: linear-gradient(to right, black 50%, white 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all .5s ease-out;
+      }
+      
+      #bac:hover {
+        background-position: left bottom;
+      }
+      
+      
+      #bac:hover {
+        color: white;  
+      }
+   
+/*   effects  */
+  
+     
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+     @media (max-width: 768px) {
+    section {
+                padding: 15px;
+            }
+        }

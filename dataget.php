@@ -130,7 +130,32 @@ class db_objects
 
     }
 
-    
+    public static function getdataby_year($year)
+    {
+        $conn = db_connection::load_db();
+
+        $query = "SELECT * FROM students WHERE year = ?";
+
+        $stmt = $conn->prepare($query);
+        $stmt->bind_param('i',$year);
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        $data = [];
+
+        if($result)
+        {
+            while($row = $result->fetch_assoc())
+            {
+                $data[] = $row;
+            }
+
+            return $data;
+        }
+
+    }
+
     public static function total(...$datas)
     {
         $total = 0;
@@ -187,3 +212,6 @@ class db_objects
 // echo count($value);
 // print_r($value[0])6;
 // print_r(round(count($value)/6));
+
+// $value = db_objects::getdataby_year('2');
+// print_r($value);

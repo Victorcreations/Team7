@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="fac.css">
+    <link rel="stylesheet" href="/css/fac.css">
     <title>Document</title>
 
     
@@ -15,7 +15,7 @@
 
 
     <div class="bulk-upload">
-        <form action="../../file_db_save.php" method="post" enctype="multipart/form-data">
+        <form action="file_db_save.php" method="post" enctype="multipart/form-data">
             <p id="paragraph">To Upload Bulk Result...</p> 
             <input type="file" class="choose" name="excelFile" accept=".xlsx, .xls, .csv">
             <button id="file" type="submit">Upload</button>
@@ -23,7 +23,7 @@
     </div>
 
     <div class="individual">
-        <form action="../../file_db_save.php" method="post">    
+        <form action="file_db_save.php" method="post">    
             <p>Individual Result Upload... </p>
             <button id="Add" type="submit">Click</button>
         </form>
@@ -31,7 +31,7 @@
 
     
         <div class="Result">
-            <form action="../../data_presentation.php" method="post">
+            <form action="data_presentation.php" method="post">
             <p id="sec">Section Wise Result</p>
             <p id="para1"> Select-Year:</p>
             <select class="year" name="year"> 
@@ -55,6 +55,7 @@
                 <option id="one" value="hsec">H</option>
                 <option id="one" value="isec">I</option>
                 <option id="one" value="jsec">J</option>
+                <option id="one" value="all">ALL</option>
             </select>
             <button id="view" type="submit">View</button>
         </form>
@@ -62,7 +63,7 @@
     
 
     <div class="single-result">
-        <form action="../../data_presentation.php" method="post">
+        <form action="data_presentation.php" method="post">
             <p>To View Result...</p> 
         <center> <input type="number"  id="regno" placeholder="Reg No" name="single_number">
             <input type="text" id="name" placeholder="Name" name="single_name">
