@@ -3707,4 +3707,226 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
             <?php
         }
     }
+
+    if(isset($_POST['single_number']) && isset($_POST['single_name']))
+    {
+        @$register_number = $_POST['single_number'];
+        @$name = $_POST['single_name'];
+
+        $result = db_objects::getdataby_individual($register_number,$name);
+
+        if($result){
+            ?>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Student Result Page</title>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+                        margin: 0;
+                        padding: 0;
+                        animation: fadeInAnimation ease 3s;
+                        animation-iteration-count: 1;
+                        animation-fill-mode: forwards;
+                    }
+                    @keyframes fadeInAnimation {
+                        0% {
+                            opacity: 0;
+                        }
+                        100% {
+                            opacity: 1;
+                        }
+                    }
+                    .container {
+                        max-width: 800px;
+                        margin: 20px auto;
+                        padding: 20px;
+                        background-color: #fff;
+                        border-radius: 10px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        overflow: hidden;
+                    }
+                    h1 {
+                        text-align: center;
+                        margin-top: 0;
+                        margin-bottom: 20px;
+                    }
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                        border-radius: 5px;
+                        overflow: hidden;
+                    }
+                    th, td {
+                        padding: 10px;
+                        text-align: left;
+                        border-bottom: 1px solid #ddd;
+                    }
+                    th {
+                        background-color: #f2f2f2;
+                    }
+                    tr:nth-child(even) {
+                        background-color: #f9f9f9;
+                    }
+                    tr:hover {
+                        background-color: #f2f2f2;
+                    }
+                    img.logo {
+                        float: left;
+                        margin-right: 20px;
+                        width: 100px;
+                        height: auto;
+                    }
+                    .logo-container {
+                        overflow: hidden;
+                    }
+                    .grade {
+                        font-weight: bold;
+                    }
+                    .print-button, .back-button {
+                        text-align: center;
+                        margin-top: 20px;
+                    }
+                    .button-container {
+                        text-align: center; /* Center align the buttons */
+                    }
+                    .print-button button, .back-button button {
+                        padding: 10px 20px;
+                        background-color: #008CBA;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease;
+                        margin: 0 5px;
+                    }
+                    .print-button button:hover, .back-button button:hover {
+                        background-color: #005f7a;
+                    }
+                    @media screen and (max-width: 600px) {
+                        .container {
+                            margin: 10px;
+                            padding: 10px;
+                        }
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <div class="logo-container">
+                        <img class="logo" src="loGO.jpeg" alt="Logo">
+                    </div>
+                    <h1>Internal 1  Result</h1>
+                    <div class="info">
+                        <p><strong>Name:</strong><?php echo $row[0][3];?></p>
+                        <p><strong>Register Number:</strong><?php echo $row[0][2];?></p>
+                        <p><strong>Semester:</strong> 5</p>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Marks</th>
+                                <th>Result</th>
+                                <th>Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><?php echo $row[0][1];?></td>
+                                <td><?php echo $row[0][40];?></td>
+                                <td class="result"></td>
+                                <td class="grade"></td>
+                            </tr>
+                                <td><?php echo $row[1][1];?></td>
+                                <td><?php echo $row[1][40];?></td>
+                                <td class="result"></td>
+                                <td class="grade"></td>
+                            </tr>
+                            <tr>
+                                <td><?php echo $row[2][1];?></td>
+                                <td><?php echo $row[2][40];?></td>
+                                <td class="result"></td>
+                                <td class="grade"></td>
+                            </tr>
+                            <tr>
+                                <td><?php echo $row[3][1];?></td>
+                                <td><?php echo $row[3][40];?></td>
+                                <td class="result"></td>
+                                <td class="grade"></td>
+                            </tr>
+                            <tr>
+                                <td><?php echo $row[4][1];?></td>
+                                <td><?php echo $row[4][40];?></td>
+                                <td class="result"></td>
+                                <td class="grade"></td>
+                            </tr>
+                            <tr>
+                                <td><?php echo $row[5][1];?></td>
+                                <td><?php echo $row[5][40];?></td>
+                                <td class="result"></td>
+                                <td class="grade"></td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td class="total"></td>
+                                <td colspan="2"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="button-container">
+                        <div class="print-button">
+                            <button onclick="window.print()">Print</button>
+                        </div>
+                        <div class="back-button">
+                            <button onclick="window.history.back()">Back</button>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    // Grades and pass/fail status calculation
+                    var subjects = document.querySelectorAll('tbody tr:not(:last-child)');
+                    var totalMarks = 0;
+
+                    subjects.forEach(function(subjectRow) {
+                        var marksCell = subjectRow.querySelector('td:nth-child(2)');
+                        var resultCell = subjectRow.querySelector('.result');
+                        var gradeCell = subjectRow.querySelector('.grade');
+                        var marks = parseInt(marksCell.textContent);
+                        totalMarks += marks;
+
+                        if (marks >= 40) {
+                            resultCell.textContent = 'Pass';
+                        } else {
+                            resultCell.textContent = 'Fail';
+                        }
+
+                        if (marks >= 90) {
+                            gradeCell.textContent = 'O';
+                        } else if (marks >= 80) {
+                            gradeCell.textContent = 'A+';
+                        } else if (marks >= 70) {
+                            gradeCell.textContent = 'A';
+                        } else if (marks >= 65) {
+                            gradeCell.textContent = 'B+';
+                        } else if (marks >= 50) {
+                            gradeCell.textContent = 'B';
+                        } else {
+                            gradeCell.textContent = 'C';
+                        }
+                    });
+
+                    
+                    var totalCell = document.querySelector('.total');
+                    totalCell.textContent = totalMarks;
+                </script>
+            </body>
+            </html>
+        <?php
+        }
+    }
 }
