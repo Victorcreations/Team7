@@ -1,0 +1,17 @@
+Direction of the bulk file upload
+
+1.file_upload.php the file will be uploaded here and it goes to file_db_save.php
+2.In file_db_save.php the file content goes into studetns table in the marks file_db_save 
+        (1.It gets database connection from the db_connect.php using the static function db_connection)
+
+Direction of file retreival 
+
+1.The index(1).php gets all the credentials such as reg.no name and captcha once all are correct it goes to
+2.login_process.php it gets db connection from db_connect.php get the username and reg number checks it in db
+3.If everything is correct it goes to result.php
+
+
+Tasks to be done 
+
+1.Format the values retrieved from db
+2.Calculate the total

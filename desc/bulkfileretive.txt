@@ -1,0 +1,26 @@
+format 1:
+subject wise : single staff will retive data for a section on a single subject
+
+format 2:
+
+class incharge : will retrive data for a single section on all subject
+
+format 3:
+
+overall : all subjects for all sections and also on subject wise
+
+sorting:
+
+1 , paass or fail
+2, section wise 
+3, section wise rank
+4, pass or fail on subject wise 
+
+14-march-2024
+
+Rank for section wise should be calculated by the sections which is allready done
+
+TODO:
+    When retreiving the individual student data it should display the rank of the student based on the rank of the overall 2nd years
+
+    Overall students results has to be done with calculating the rank for the overall year

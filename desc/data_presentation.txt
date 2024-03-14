@@ -1,0 +1,4 @@
+Constratint 1:
+Total of the all subjects
+Pass/fail of the subjects
+Show rank if Pass

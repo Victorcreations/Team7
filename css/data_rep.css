@@ -1,0 +1,42 @@
+h2
+{
+    text-align: center;
+}
+
+body
+{
+    height: 90vh;
+}
+
+table
+{
+    width: 100%;    
+}
+
+
+table,th,tr,td{
+    border-collapse: collapse;
+    border: 2px solid rgb(0, 0, 0);
+    /* width: 50%; */
+    text-align: center;
+}
+
+.sec-contents
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: #6fff00fc; */
+}
+/* 
+a{
+    text-align: center;
+} */
+
+.anchor
+{
+    position: relative;
+    top: 100px;
+    /* right: 50px; */
+    left: 50%;
+}
