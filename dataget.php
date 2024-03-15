@@ -28,15 +28,15 @@ class db_objects
         }
     }
 
-    public static function getdataby_individual($register_number,$name)
+    public static function getdataby_individual($register_number,$name,$year)
     {
         $conn = db_connection::load_db();
 
-        $query = "SELECT * FROM student WHERE Name = ? AND reg_no = ?";
+        $query = "SELECT * FROM student WHERE Name = ? AND reg_no = ? AND year = ?";
 
         $stmt = $conn->prepare($query);
 
-        $stmt -> bind_param("si",$name,$register_number);
+        $stmt -> bind_param("sii",$name,$register_number,$year);
 
         $stmt -> execute();
 

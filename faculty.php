@@ -67,6 +67,7 @@
             <p>To View Result...</p> 
         <center> <input type="number"  id="regno" placeholder="Reg No" name="single_number">
             <input type="text" id="name" placeholder="Name" name="single_name">
+            <input type="text" id="year" placeholder="Year" name="single_year">
             <button id="toview" type="submit">View</button> </center>
         </form>
     </div>
