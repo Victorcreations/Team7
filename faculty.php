@@ -67,7 +67,12 @@
             <p>To View Result...</p> 
         <center> <input type="number"  id="regno" placeholder="Reg No" name="single_number">
             <input type="text" id="name" placeholder="Name" name="single_name">
-            <input type="text" id="year" placeholder="Year" name="single_year">
+            <select class="year" name="single_year"> 
+                <option></option>
+                <option id="one" value="two">2-year</option>
+                <option id="one" value="three">3-year</option>
+                <option id="one"value="four">4-year</option>
+            </select>
             <button id="toview" type="submit">View</button> </center>
         </form>
     </div>

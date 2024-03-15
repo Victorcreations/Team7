@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
         <h2>Panimalar engineering college</h2>
     </header>
 </body>
-</html>
+</html> -->
 
 <?php
 include "dataget.php";
@@ -32,8 +32,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="/css/data_rep.css">
         </head>
         <body>
+        <h2>Panimalar engineering college</h2>
             <h3>Section : <?php echo $sec_result[0]['section'];?></h3>
             <div class="sec-contents">
                 <table>
@@ -144,8 +146,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="/css/data_rep.css">
         </head>
         <body>
+            <h2>Panimalar engineering college</h2>
             <h3>Section : <?php echo $sec_result[0]['section'];?></h3>
             <div class="sec-contents">
                 <table>
@@ -3427,7 +3431,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                             
                         }
                         
-                        $rank = db_objects::rank_check($pass_total);
+                        $rank2 = db_objects::rank_check($pass_total);
                         // print_r($rank);
                         $num = 0;
                         $value = 0;
@@ -3449,7 +3453,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                             <td><?php echo $t16 = $sec_result[$value+5]['total'];?></td>
                             <?php $value += 6;?>
                             <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
-                            <?php foreach($rank as $key => $ans){
+                            <?php foreach($rank2 as $key => $ans){
                                 if($total1 === $ans){
                                     ?>
                                     <td class="rank">1</td>
@@ -3457,7 +3461,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                                     break;
                                 }else{
                                     ?>
-                                    <?php $student_rank = array_search($total1,$rank);?>
+                                    <?php $student_rank = array_search($total1,$rank2);?>
                                     <td class="rank"><?php echo $student_rank;?></td>
                                 <?php
                                 break;
@@ -3470,6 +3474,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         $num += 6;
                         }
                         
+                        
                         ?>
                     </table>
                 </div>
@@ -3478,6 +3483,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
             <script src="/js/data_representation.js"></script>
             </html>
             <?php
+            return $rank2;
         }
     }
 
@@ -3540,7 +3546,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                             
                         }
                         
-                        $rank = db_objects::rank_check($pass_total);
+                        $rank3 = db_objects::rank_check($pass_total);
                         // print_r($rank);
                         $num = 0;
                         $value = 0;
@@ -3562,7 +3568,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                             <td><?php echo $t16 = $sec_result[$value+5]['total'];?></td>
                             <?php $value += 6;?>
                             <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
-                            <?php foreach($rank as $key => $ans){
+                            <?php foreach($rank3 as $key => $ans){
                                 if($total1 === $ans){
                                     ?>
                                     <td class="rank">1</td>
@@ -3570,7 +3576,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                                     break;
                                 }else{
                                     ?>
-                                    <?php $student_rank = array_search($total1,$rank);?>
+                                    <?php $student_rank = array_search($total1,$rank3);?>
                                     <td class="rank"><?php echo $student_rank;?></td>
                                 <?php
                                 break;
@@ -3591,7 +3597,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
             <script src="/js/data_representation.js"></script>
             </html>
             <?php
+            return $rank3;
         }
+
     }
 
 
@@ -3654,7 +3662,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                             
                         }
                         
-                        $rank = db_objects::rank_check($pass_total);
+                        $rank4 = db_objects::rank_check($pass_total);
                         // print_r($rank);
                         $num = 0;
                         $value = 0;
@@ -3676,7 +3684,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                             <td><?php echo $t16 = $sec_result[$value+5]['total'];?></td>
                             <?php $value += 6;?>
                             <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
-                            <?php foreach($rank as $key => $ans){
+                            <?php foreach($rank4 as $key => $ans){
                                 if($total1 === $ans){
                                     ?>
                                     <td class="rank">1</td>
@@ -3684,7 +3692,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                                     break;
                                 }else{
                                     ?>
-                                    <?php $student_rank = array_search($total1,$rank);?>
+                                    <?php $student_rank = array_search($total1,$rank4);?>
                                     <td class="rank"><?php echo $student_rank;?></td>
                                 <?php
                                 break;
@@ -3705,15 +3713,42 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
             <script src="/js/data_representation.js"></script>
             </html>
             <?php
+            return $rank4;
         }
     }
 
     if(isset($_POST['single_number']) && isset($_POST['single_name']))
     {
         @$register_number = $_POST['single_number'];
+        echo $register_number;
         @$name = $_POST['single_name'];
+        echo $name;
+        @$year = $_POST['single_year'];
+        echo $year;
 
-        $result = db_objects::getdataby_individual($register_number,$name);
+        $year_data = 0;
+
+        if($year === 'two'){
+            $year_data = 2;
+        }if($year === 'three'){
+            $year_data = 3;
+        }if($year === 'four'){
+            $year_data = 4;
+        }
+
+        $rank_arr = [];
+
+        if($year === 'two'){
+            
+        }if($year === 'three'){
+            $rank_arr [] = $rank3;
+        }if($year === 'four'){
+            $rank_arr [] = $rank4;
+        }
+
+        print_r($rank_arr);
+
+        $result = db_objects::getdataby_individual($name,$register_number,$year_data);
 
         if($result){
             ?>
@@ -3822,8 +3857,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     </div>
                     <h1>Internal 1  Result</h1>
                     <div class="info">
-                        <p><strong>Name:</strong><?php echo $row[0][3];?></p>
-                        <p><strong>Register Number:</strong><?php echo $row[0][2];?></p>
+                        <p><strong>Name:</strong><?php echo $result[0]['Name'];?></p>
+                        <p><strong>Register Number:</strong><?php echo $result[0]['reg_no'];?></p>
                         <p><strong>Semester:</strong> 5</p>
                     </div>
                     <table>
@@ -3837,37 +3872,37 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         </thead>
                         <tbody>
                             <tr>
-                                <td><?php echo $row[0][1];?></td>
-                                <td><?php echo $row[0][40];?></td>
+                                <td><?php echo $result[0]['subject'];?></td>
+                                <td><?php echo $result[0]['total'];?></td>
                                 <td class="result"></td>
                                 <td class="grade"></td>
                             </tr>
-                                <td><?php echo $row[1][1];?></td>
-                                <td><?php echo $row[1][40];?></td>
-                                <td class="result"></td>
-                                <td class="grade"></td>
-                            </tr>
-                            <tr>
-                                <td><?php echo $row[2][1];?></td>
-                                <td><?php echo $row[2][40];?></td>
+                                <td><?php echo $result[1]['subject'];?></td>
+                                <td><?php echo $result[1]['total'];?></td>
                                 <td class="result"></td>
                                 <td class="grade"></td>
                             </tr>
                             <tr>
-                                <td><?php echo $row[3][1];?></td>
-                                <td><?php echo $row[3][40];?></td>
+                                <td><?php echo $result[2]['subject'];?></td>
+                                <td><?php echo $result[2]['total'];?></td>
                                 <td class="result"></td>
                                 <td class="grade"></td>
                             </tr>
                             <tr>
-                                <td><?php echo $row[4][1];?></td>
-                                <td><?php echo $row[4][40];?></td>
+                                <td><?php echo $result[3]['subject'];?></td>
+                                <td><?php echo $result[3]['total'];?></td>
                                 <td class="result"></td>
                                 <td class="grade"></td>
                             </tr>
                             <tr>
-                                <td><?php echo $row[5][1];?></td>
-                                <td><?php echo $row[5][40];?></td>
+                                <td><?php echo $result[4]['subject'];?></td>
+                                <td><?php echo $result[4]['total'];?></td>
+                                <td class="result"></td>
+                                <td class="grade"></td>
+                            </tr>
+                            <tr>
+                                <td><?php echo $result[5]['subject'];?></td>
+                                <td><?php echo $result[5]['total'];?></td>
                                 <td class="result"></td>
                                 <td class="grade"></td>
                             </tr>
@@ -3927,6 +3962,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
             </body>
             </html>
         <?php
+        }else{
+            echo "No fetched data";
         }
+    }else{
+        echo "No request arrived";
     }
 }

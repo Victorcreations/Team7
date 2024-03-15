@@ -28,11 +28,11 @@ class db_objects
         }
     }
 
-    public static function getdataby_individual($register_number,$name,$year)
+    public static function getdataby_individual($name,$register_number,$year)
     {
         $conn = db_connection::load_db();
 
-        $query = "SELECT * FROM student WHERE Name = ? AND reg_no = ? AND year = ?";
+        $query = "SELECT * FROM students WHERE Name = ? AND reg_no = ? AND year = ? ";
 
         $stmt = $conn->prepare($query);
 
@@ -214,4 +214,7 @@ class db_objects
 // print_r(round(count($value)/6));
 
 // $value = db_objects::getdataby_year('2');
+// print_r($value);
+
+// $value = db_objects::getdataby_individual('ABINAV.M','211413205001',2);
 // print_r($value);
