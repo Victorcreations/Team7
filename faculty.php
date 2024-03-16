@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/fac.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Train+One&display=swap" rel="stylesheet">
     <title>Document</title>
 
     
@@ -65,9 +66,9 @@
     <div class="single-result">
         <form action="data_presentation.php" method="post">
             <p>To View Result...</p> 
-        <center> <input type="number"  id="regno" placeholder="Reg No" name="single_number">
+        <center> <input type="text"  id="regno" placeholder="Reg No" name="single_number">
             <input type="text" id="name" placeholder="Name" name="single_name">
-            <select class="year" name="single_year"> 
+            <select class="single_year" name="single_year"> 
                 <option></option>
                 <option id="one" value="two">2-year</option>
                 <option id="one" value="three">3-year</option>
@@ -97,5 +98,7 @@
         <a href="retrievequestionpaper.html"><button></button></a>
     </section>
      <button  href="faculty.php" id="bac"> Back </button>
+
+        <h5>Made with <span style="color:red;">&#x2764;</span> by the developers of the information technology</h5>
 
 </html>
