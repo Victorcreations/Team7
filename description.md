@@ -1,2 +1,1 @@
-<span style="color:orange"># DESCRIPTION</span>
-
+$${\color{orange}Description}
