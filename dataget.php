@@ -186,42 +186,15 @@ class db_objects
     public static function rank_check($total_marks)
     {
         rsort($total_marks);
-        // global $total;
         $results = [];
         $rank = 1;
 
         for($i=0;$i<count($total_marks);$i++)
         {
             $results[$total_marks[$i]] = $rank;
-            // $total = $total_marks[$i]; 
             $rank++;
         }
         return $results;
     }
 }
 
-// $val = db_objects::rank_check([1,55,43,67,98,3,45,33]);
-// print_r($val);
-// $value = db_objects::getdataby_section("a");
-// print_r(count($value));
-// echo"<br>";
-// db_objects::result_check('a','b','v');
-// $value = db_objects::getdataby_section("a");
-// for($i=0;$i<7;$i++)
-// {
-//     print_r($value[$i]);
-// }
-// echo count($value);
-// print_r($value[0])6;
-// print_r(round(count($value)/6));
-
-// $value = db_objects::getdataby_year('2');
-// print_r($value);
-// 
-// $value = db_objects::getdataby_individual('ABINAV.M','211413205001',2);
-// print_r($value);
-
-
-// $rank_arr = [98,98,80,88,78,99,100,102];
-// $value = db_objects::rank_check($rank_arr);
-// print_r($value);
