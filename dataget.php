@@ -188,11 +188,13 @@ class db_objects
         rsort($total_marks);
         // global $total;
         $results = [];
+        $rank = 1;
 
         for($i=0;$i<count($total_marks);$i++)
         {
-            $results[$i+1] = $total_marks[$i];
+            $results[$total_marks[$i]] = $rank;
             // $total = $total_marks[$i]; 
+            $rank++;
         }
         return $results;
     }
@@ -215,6 +217,11 @@ class db_objects
 
 // $value = db_objects::getdataby_year('2');
 // print_r($value);
-
+// 
 // $value = db_objects::getdataby_individual('ABINAV.M','211413205001',2);
+// print_r($value);
+
+
+// $rank_arr = [98,98,80,88,78,99,100,102];
+// $value = db_objects::rank_check($rank_arr);
 // print_r($value);

@@ -1,24 +1,9 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/data_rep.css">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <h2>Panimalar engineering college</h2>
-    </header>
-</body>
-</html> -->
-
 <?php
 include "dataget.php";
 
 if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
 {
-    if(isset($_POST['year']) && isset($_POST['section']))
+    if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['year']) && isset($_POST['section']))
     {
         @$year = $_POST['year'];
         @$section = $_POST['section'];
@@ -80,6 +65,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     
                     $rank = db_objects::rank_check($pass_total);
                     // print_r($rank);
+                    // print_r($rank);
                     $num = 0;
                     $value = 0;
                     // echo $num;
@@ -100,18 +86,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -123,7 +109,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     ?>
                 </table>
             </div>
-            <a href="/Own/login/faculty.php" class="anchor">Back</a>
+            <a href="faculty.php" class="anchor">Back</a>
         </body>
         <script src="/js/data_representation.js"></script>
         </html>
@@ -214,18 +200,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -326,18 +312,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -438,18 +424,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -549,18 +535,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -661,18 +647,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -773,18 +759,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -885,18 +871,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -997,18 +983,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -1109,18 +1095,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -1221,18 +1207,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -1333,18 +1319,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -1445,18 +1431,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -1556,18 +1542,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -1668,18 +1654,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -1780,18 +1766,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -1891,18 +1877,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -2002,18 +1988,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -2114,18 +2100,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -2226,18 +2212,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -2338,18 +2324,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -2450,18 +2436,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -2562,18 +2548,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -2673,18 +2659,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -2785,18 +2771,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -2896,18 +2882,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -3007,18 +2993,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -3119,18 +3105,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -3230,18 +3216,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -3341,18 +3327,18 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                         <?php $value += 6;?>
                         <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         <?php foreach($rank as $key => $ans){
-                            if($total1 === $ans){
+                            if($total1 === $key){
                                 ?>
-                                <td class="rank">1</td>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                            }else{
-                                ?>
-                                <?php $student_rank = array_search($total1,$rank);?>
-                                <td class="rank"><?php echo $student_rank;?></td>
+                            }
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
                             <?php
-                            break;
-                                }
                         }
                             ?>
                         <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
@@ -3454,20 +3440,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                             <?php $value += 6;?>
                             <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                             <?php foreach($rank2 as $key => $ans){
-                                if($total1 === $ans){
-                                    ?>
-                                    <td class="rank">1</td>
-                                    <?php
-                                    break;
-                                }else{
-                                    ?>
-                                    <?php $student_rank = array_search($total1,$rank2);?>
-                                    <td class="rank"><?php echo $student_rank;?></td>
+                            if($total1 === $key){
+                                ?>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                                    }
                             }
-                                ?>
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
+                            <?php
+                        }
+                            ?>
                             <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         </tr>
                         <?php
@@ -3569,20 +3555,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                             <?php $value += 6;?>
                             <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                             <?php foreach($rank3 as $key => $ans){
-                                if($total1 === $ans){
-                                    ?>
-                                    <td class="rank">1</td>
-                                    <?php
-                                    break;
-                                }else{
-                                    ?>
-                                    <?php $student_rank = array_search($total1,$rank3);?>
-                                    <td class="rank"><?php echo $student_rank;?></td>
+                            if($total1 === $key){
+                                ?>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                                    }
                             }
-                                ?>
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
+                            <?php
+                        }
+                            ?>
                             <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         </tr>
                         <?php
@@ -3685,20 +3671,20 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                             <?php $value += 6;?>
                             <td><?php echo $total1 = db_objects::total($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                             <?php foreach($rank4 as $key => $ans){
-                                if($total1 === $ans){
-                                    ?>
-                                    <td class="rank">1</td>
-                                    <?php
-                                    break;
-                                }else{
-                                    ?>
-                                    <?php $student_rank = array_search($total1,$rank4);?>
-                                    <td class="rank"><?php echo $student_rank;?></td>
+                            if($total1 === $key){
+                                ?>
+                                <td class="rank"><?php echo $ans;?></td>
                                 <?php
                                 break;
-                                    }
                             }
-                                ?>
+                        }
+
+                        if($total1 !== $key){
+                            ?>
+                            <td></td>
+                            <?php
+                        }
+                            ?>
                             <td class="fail"><?php echo db_objects::result_check($t11,$t12,$t13,$t14,$t15,$t16);?></td>
                         </tr>
                         <?php
@@ -3720,35 +3706,123 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
     if(isset($_POST['single_number']) && isset($_POST['single_name']))
     {
         @$register_number = $_POST['single_number'];
-        echo $register_number;
         @$name = $_POST['single_name'];
-        echo $name;
         @$year = $_POST['single_year'];
-        echo $year;
 
         $year_data = 0;
 
         if($year === 'two'){
-            $year_data = 2;
+            $year_data += 2;
         }if($year === 'three'){
-            $year_data = 3;
+            $year_data += 3;
         }if($year === 'four'){
-            $year_data = 4;
+            $year_data += 4;
         }
-
-        $rank_arr = [];
-
-        if($year === 'two'){
-            
-        }if($year === 'three'){
-            $rank_arr [] = $rank3;
-        }if($year === 'four'){
-            $rank_arr [] = $rank4;
-        }
-
-        print_r($rank_arr);
 
         $result = db_objects::getdataby_individual($name,$register_number,$year_data);
+
+        $stud_mark1 = $result[0]['total'];
+        $stud_mark2 = $result[1]['total'];
+        $stud_mark3 = $result[2]['total'];
+        $stud_mark4 = $result[3]['total'];
+        $stud_mark5 = $result[4]['total'];
+        $stud_mark6 = $result[5]['total'];
+
+        $candidate_total = db_objects::total($stud_mark1,$stud_mark2,$stud_mark3,$stud_mark4,$stud_mark5,$stud_mark6);
+
+        $rank_arr = [];
+        $count = 0;
+        $rank_result = 0;
+        
+        if($year === 'two'){
+            $res = db_objects::getdataby_year('2');
+            for($totals=0;$totals<round(count($res)/6);$totals++){
+                $mark1 = $res[$count]['total'];
+                $mark2 = $res[$count+1]['total'];
+                $mark3 = $res[$count+2]['total'];
+                $mark4 = $res[$count+3]['total'];
+                $mark5 = $res[$count+4]['total'];
+                $mark6 = $res[$count+5]['total'];
+                $count += 6;
+
+                $mark_total = db_objects::total($mark1,$mark2,$mark3,$mark4,$mark5,$mark6);
+                $check = db_objects::result_check($mark1,$mark2,$mark3,$mark4,$mark5,$mark6);
+
+                if($check > 0){
+                    continue;
+                }else{
+                    $rank_arr [] = $mark_total; 
+                }
+            }
+            $final_rank = db_objects::rank_check($rank_arr);
+
+            foreach($final_rank as $key => $value){
+                if($candidate_total === $key)
+                {
+                    $rank_result = $value;
+                }
+            }
+        }
+
+        if($year === 'three'){
+            $res = db_objects::getdataby_year('3');
+            // $rank_result = 0;
+            for($totals=0;$totals<round(count($res)/6);$totals++){
+                $mark1 = $res[$count]['total'];
+                $mark2 = $res[$count+1]['total'];
+                $mark3 = $res[$count+2]['total'];
+                $mark4 = $res[$count+3]['total'];
+                $mark5 = $res[$count+4]['total'];
+                $mark6 = $res[$count+5]['total'];
+                $count += 6;
+
+                $mark_total = db_objects::total($mark1,$mark2,$mark3,$mark4,$mark5,$mark6);
+                $check = db_objects::result_check($mark1,$mark2,$mark3,$mark4,$mark5,$mark6);
+
+                if($check > 0){
+                }else{
+                    $rank_arr [] = $mark_total; 
+                }
+            }
+
+            $final_rank = db_objects::rank_check($rank_arr);
+
+            foreach($final_rank as $key => $value){
+                if($candidate_total === $key)
+                {
+                    $rank_result = $value;
+                }
+            }
+        }
+
+        if($year === 'four'){
+            $res = db_objects::getdataby_year('4');
+            // $rank_result = 0;
+            for($totals=0;$totals<round(count($res)/6);$totals++){
+                $mark1 = $res[$count]['total'];
+                $mark2 = $res[$count+1]['total'];
+                $mark3 = $res[$count+2]['total'];
+                $mark4 = $res[$count+3]['total'];
+                $mark5 = $res[$count+4]['total'];
+                $mark6 = $res[$count+5]['total'];
+                $count += 6;
+
+                $mark_total = db_objects::total($mark1,$mark2,$mark3,$mark4,$mark5,$mark6);
+                $check = db_objects::result_check($mark1,$mark2,$mark3,$mark4,$mark5,$mark6);
+
+                if($check > 0){
+                }else{
+                    $rank_arr [] = $mark_total; 
+                }
+            }
+
+            foreach($rank_arr as $key => $value){
+                if($candidate_total === $key)
+                {
+                    $rank_result = $value;
+                }
+            }    
+        }
 
         if($result){
             ?>
@@ -3909,7 +3983,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                             <tr>
                                 <td>Total</td>
                                 <td class="total"></td>
-                                <td colspan="2"></td>
+                                <td colspan="2">Rank : <?php echo $rank_result;?></td>
                             </tr>
                         </tbody>
                     </table>
@@ -3965,7 +4039,5 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
         }else{
             echo "No fetched data";
         }
-    }else{
-        echo "No request arrived";
     }
 }
