@@ -64,12 +64,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
-                    // print_r($rank);
+            
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+        
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -179,11 +177,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+                    
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                    
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -291,11 +288,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+        
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+            
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -403,11 +399,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+            
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                    
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -514,11 +509,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+                
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                    
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -626,11 +620,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+                    
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -741,8 +734,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     // print_r($rank);
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                    
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -850,11 +842,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+                
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+            
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -962,11 +953,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+    
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                    
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -1074,11 +1064,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+                    
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                    
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -1186,11 +1175,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+                    
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                    
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -1298,11 +1286,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+                    
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -1410,11 +1397,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+                
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                    
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -1521,11 +1507,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+        
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -1633,11 +1618,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+                    
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                    
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -1745,11 +1729,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+        
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -1856,11 +1839,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+                    
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                    
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -1967,11 +1949,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+                
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -2079,11 +2060,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+                    
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -2191,11 +2171,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+                
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                    
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -2303,11 +2282,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+            
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -2415,11 +2393,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+                
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+            
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -2527,11 +2504,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+    
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -2638,11 +2614,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+            
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -2750,11 +2725,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+        
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                    
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -2861,11 +2835,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+        
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+            
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -2972,11 +2945,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+            
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -3084,11 +3056,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+                    
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+                    
+                    
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -3195,11 +3167,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+                    
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+    
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -3306,11 +3277,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
                     }
                     
                     $rank = db_objects::rank_check($pass_total);
-                    // print_r($rank);
+                    
                     $num = 0;
                     $value = 0;
-                    // echo $num;
-                    // echo count($sec_result);
+
                     for($i=0;$i<round(count($sec_result)/6);$i++)
                     {
                         ?> 
@@ -3469,7 +3439,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
             <script src="/js/data_representation.js"></script>
             </html>
             <?php
-            return $rank2;
         }
     }
 
@@ -3583,7 +3552,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
             <script src="/js/data_representation.js"></script>
             </html>
             <?php
-            return $rank3;
         }
 
     }
@@ -3699,7 +3667,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
             <script src="/js/data_representation.js"></script>
             </html>
             <?php
-            return $rank4;
         }
     }
 
