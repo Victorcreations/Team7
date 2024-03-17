@@ -142,20 +142,22 @@ font-size: 20px;
         height: 25px;
         width: 200px;
         top: 40px;
-        left: 34px;
+        left: 0px;
     }
 
     .single_year{
         position: relative;
-        top: 90px;
-        right: 100px;
-        width: 90px;
+        top: -40px;
+        right: -50px;
+        width: 195px;
         height: 25px;
-        /* display: block; */
-    }
+        display: inline;
+      }
 
    #toview{ 
-
+    position: relative;
+    right: 89px;
+    top: 10px;
     border: 1px solid black;
     border-radius: 3px;
     width: 100px;
