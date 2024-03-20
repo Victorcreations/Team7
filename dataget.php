@@ -130,6 +130,40 @@ class db_objects
 
     }
 
+    public static function user_check($name,$register_number)
+    {
+        $conn = db_connection::load_db();
+
+        $query = "SELECT COUNT(*) FROM students WHERE Name = ? AND reg_no = ?";
+
+        $stmt = $conn -> prepare($query);
+
+        $stmt -> bind_param("si",$name,$register_number);
+
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        $row = $result->fetch_assoc();
+
+        $count = $row['COUNT(*)'];
+
+        return $count;
+    }
+
+    public static function get_serial_number()
+    {
+        $conn = db_connection::load_db();
+
+        $query = "SELECT sno FROM students ORDER BY sno DESC LIMIT 1";
+
+        $stmt = $conn->execute_query($query);
+
+        $result = $stmt->fetch_assoc();
+
+        return $result['sno'];
+    }
+
     public static function getdataby_year($year)
     {
         $conn = db_connection::load_db();
