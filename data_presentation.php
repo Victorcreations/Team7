@@ -4007,4 +4007,27 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')  //This is for 2nd year A SECITON
             echo "No fetched data";
         }
     }
+
+    //name = gokul
+    //if name === gokul
+    //sno = 1
+
+    if(isset($_POST['single_name']) && isset($_POST['single_reg']) && isset($_POST['year_input']) && isset($_POST['single_subject']))
+    {
+        @$name = $_POST['single_name'];
+        @$register_number = $_POST['single_reg'];
+        @$year = $_POST['year_input'];
+        @$subject = $_POST['single_subject'];
+
+        $serial_number = db_objects::get_serial_number();
+        $student_existense = db_objects::user_check($name,$register_number);
+
+        if($student_existense > 0)
+        {
+
+        }
+        else{
+            
+        }
+    }
 }
